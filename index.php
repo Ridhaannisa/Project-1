@@ -3,10 +3,32 @@
 class Hewan {
 	public $jumlah_kaki, $bisa_terbang, $suara;
 }
-
-class Kucing {
+	
 	function bersuara(){
-		return $this->suara;
+		return "Miaww";
+}
+
+class Kucing extends Hewan {
+	function bersuara(){
+		return "Meooong";
+	}
+}
+
+class Anjing extends Hewan {
+	function bersuara(){
+		return "Guk Guk";
+	}
+}
+
+class Elang extends Hewan {
+	function bersuara(){
+		return "Miiiip";
+	}
+}
+
+class Angsa extends Hewan {
+	function bersuara(){
+		return "Kwaaak";
 	}
 }
 
@@ -21,11 +43,6 @@ echo "Suaranya : ".$momo->bersuara()."<br>";
 
 echo "<hr>";
 
-class Anjing {
-	function bersuara(){
-		return $this->suara;
-	}
-}
 
 $doggo = new Anjing;
 $doggo->jumlah_kaki = 4;
@@ -38,11 +55,6 @@ echo "Suaranya : ".$doggo->bersuara();
 
 echo "<hr>";
 
-class  Elang{
-	function bersuara(){
-		return $this->suara;
-	}
-}
 
 $zya = new Elang;
 $zya->jumlah_kaki = 2;
@@ -55,11 +67,6 @@ echo "Suaranya : ".$zya->bersuara();
 
 echo "<hr>";
 
-class  Angsa{
-	function bersuara(){
-		return $this->suara;
-	}
-}
 
 $masha = new Angsa;
 $masha->jumlah_kaki = 2;
